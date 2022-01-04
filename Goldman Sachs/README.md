@@ -11,7 +11,7 @@
 ## 9
 ## 10
 ## [Problem 11](https://practice.geeksforgeeks.org/viewSol.php?subId=8f167143a7fe15c22aae7d2d91678247&pid=702678&user=sweta040799)
-## 12
+## [Problem 12](https://practice.geeksforgeeks.org/viewSol.php?subId=5de86669526cefeec32ac9a3d735cbe1&pid=704775&user=sweta040799)
 ## 13
 ## [Problem 14](https://leetcode.com/submissions/detail/612390417/)
 ## [Problem 15](https://practice.geeksforgeeks.org/viewSol.php?subId=a1060fe5f8d78aa9f9cdf69aab0cae20&pid=704691&user=sweta040799)
