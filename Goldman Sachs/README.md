@@ -7,7 +7,7 @@
 ### [Problem 5](https://practice.geeksforgeeks.org/viewSol.php?subId=2f349912369b1443f59ac37c5bd0fd16&pid=703093&user=sweta040799)
 ### [Problem 6](https://leetcode.com/submissions/detail/611671913/)
 ### [Problem 7](https://practice.geeksforgeeks.org/viewSol.php?subId=9c34550221bd9b802139deba82ff97c7&pid=704216&user=sweta040799)
-### 8
+### [Problem 8](https://practice.geeksforgeeks.org/viewSol.php?subId=bcdcd0ccc7728d19e227870e0c2c5606&pid=705327&user=sweta040799)
 ### [Problem 9](https://practice.geeksforgeeks.org/viewSol.php?subId=9472bff61a4ee3afaa488e4ec9b85636&pid=703607&user=sweta040799)
 ### 10 No link
 ### [Problem 11](https://practice.geeksforgeeks.org/viewSol.php?subId=8f167143a7fe15c22aae7d2d91678247&pid=702678&user=sweta040799)
