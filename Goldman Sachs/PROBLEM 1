@@ -1,0 +1,20 @@
+  vector<vector<string> > Anagrams(vector<string>& string_list) {
+        vector<vector<string>> ans;
+        vector<unordered_map<char,int>> v;
+        for(int i = 0; i < string_list.size() ; i++){
+            string curr_str = string_list[i];
+            unordered_map<char,int> ump;
+            for(auto& itr : curr_str){
+                ump[itr]++;
+            }
+            if(find(v.begin(),v.end(),ump) == v.end()){
+                v.push_back(ump);
+                ans.push_back({curr_str});
+            }
+            else{
+                int idx = find(v.begin(),v.end(),ump) - v.begin();
+                ans[idx].push_back(curr_str);
+            }
+        }
+        return ans;
+    }
