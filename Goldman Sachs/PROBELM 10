@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int *v = new int[10000000];
+
+int main(){
+    freopen("input2.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
+ 
+    int a;
+    for(int i=0;i<10000000;i++){
+        cin>>v[i];
+    }
+
+    sort(v , v+10000000,greater<int>());
+
+    int k = 10,i=0;
+    while(k--){
+        cout<<v[i]<<'\n';
+        i++;
+       
+    }
+}
