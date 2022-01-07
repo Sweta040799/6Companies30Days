@@ -1,0 +1,29 @@
+	void matchPairs(char nuts[], char bolts[], int n) {
+	    map<char,int> mp;
+	    mp.insert({'!',0});
+	    mp.insert({'#',0});
+	    mp.insert({'$',0});
+	    mp.insert({'%',0});
+	    mp.insert({'&',0});
+	    mp.insert({'*',0});
+	    mp.insert({'@',0});
+	    mp.insert({'^',0});
+	    mp.insert({'~',0});
+	    
+	    for(int i=0;i<n;i++){
+	        mp[nuts[i]]++;
+	        mp[bolts[i]]++;
+	    }
+	    
+	    int i=0;
+	    for(auto it : mp){
+	        if(it.second > 1){
+	          nuts[i] = it.first;
+	          bolts[i] = it.first;
+	           i++;
+	        } 
+	       
+	    }
+	    
+	    
+	}
