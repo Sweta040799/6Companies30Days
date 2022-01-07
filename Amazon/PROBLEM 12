@@ -1,0 +1,23 @@
+  string colName (long long int n)
+    {
+        string ans = "";
+        if(n < 27){
+            ans += ('A' + n -1);
+        }
+        else{
+            vector<long long int> s;
+            while(n){
+                if(n%26 == 0){
+                 s.push_back(26);
+                 n--;
+                }
+                else
+                 s.push_back(n%26);
+               n = n/26;
+            }
+            for(int i=0;i<s.size();i++)
+              ans += 'A'+s[i]-1;
+            reverse(ans.begin(),ans.end());
+        }
+         return ans;
+    }
