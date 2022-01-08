@@ -1,1 +1,15 @@
-
+int maxProfit(int k, int n, int p[]) {
+        int dp[k+1][n+1];
+        memset(dp,0,sizeof(dp));
+        
+        for(int i=1;i<k+1;i++){
+            int mx = -1;
+            for(int j=1;j<n;j++){
+                mx = max(mx,dp[i-1][j-1] - p[j-1]);
+                
+                dp[i][j] = max(dp[i][j-1],p[j] + mx);
+            }
+        }
+        
+        return dp[k][n-1];
+    }
