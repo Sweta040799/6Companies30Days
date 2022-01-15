@@ -1,1 +1,23 @@
-
+ void recur(int a[], int N, int idx, string str, vector<string>& ans, vector<string> st){
+        if(idx >= N){
+            ans.push_back(str);
+            return;
+        }
+        string temp = st[a[idx]];
+        
+        for(auto& it : temp){
+            recur(a, N, idx+1, str+it, ans, st);
+        }
+        
+        return;
+    }
+    vector<string> possibleWords(int a[], int N)
+    {
+        vector<string> ans;
+        vector<string> st(10);
+        st[0] = "", st[1] = "", st[2] = "abc", st[3] = "def", st[4] = "ghi", st[5] = "jkl", st[6] = "mno", st[7] = "pqrs";
+        st[8] = "tuv", st[9] = "wxyz";
+        
+        recur(a, N, 0, "", ans, st);
+        return ans;
+    }
