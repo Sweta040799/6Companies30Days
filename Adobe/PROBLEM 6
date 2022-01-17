@@ -1,0 +1,29 @@
+  vector<string> ans;
+    void poss(string &str,int l, int r){
+        if(l == 0 && r == 0){
+            ans.push_back(str);
+            return;
+        }
+        
+        if(l > 0){
+            str.push_back('(');
+            poss(str,l-1,r);
+            str.pop_back();
+        }
+        
+        if(r > 0){
+            if(l < r){
+               str.push_back(')');
+               poss(str,l,r-1);
+               str.pop_back();
+            }
+        }
+    }
+    vector<string> AllParenthesis(int n) 
+    {
+        // ans.clear();
+        string str = "";
+        poss(str,n,n);
+        
+        return ans;
+    }
