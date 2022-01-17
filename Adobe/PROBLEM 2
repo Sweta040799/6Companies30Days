@@ -1,1 +1,18 @@
-
+ int lengthOfLongestAP(int A[], int n) {
+        int ans = 0;
+        if(n <= 1) return n;
+        
+        int dp[n][10001];
+        sort(A,A+n);
+        
+        for(int i = 0; i < n; i++){
+            for(int j = i+1; j < n; j++){
+                int diff = A[j] - A[i];
+                
+                dp[j][diff] = max(dp[i][diff] + 1, 2);
+                
+                ans = max(ans, dp[j][diff]);
+            }
+        }
+      return ans;
+    }
