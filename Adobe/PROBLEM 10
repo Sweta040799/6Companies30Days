@@ -1,0 +1,25 @@
+vector<string> winner(string arr[],int n)
+    {
+        unordered_map<string,int> mp;
+        for(int i=0;i<n;i++){
+            if(mp.find(arr[i]) == mp.end())
+              mp.insert({arr[i],1});
+              
+            else
+              mp[arr[i]]++;
+        }
+        
+        string name;
+        int vote = -1;
+        
+        for(auto it : mp){
+            if(vote < it.second){
+                vote = it.second;
+                name = it.first;
+            }
+            else if(vote == it.second){
+                name = (name > it.first) ? it.first : name;
+            }
+        }
+       return {name,to_string(vote)}; 
+    }
