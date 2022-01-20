@@ -1,0 +1,62 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve(){
+    string a,b;
+    cin>>a>>b;
+
+    vector<int> va,vb;
+    string temp = "";
+    for(int i=0;i<a.size()+1;i++){
+        
+        if(a[i] == '.' || i == a.size()){
+            va.push_back(stoi(temp));
+            temp = "";
+          continue;
+        }
+        else
+          temp += a[i];
+    }
+
+    for(int i=0;i<b.size()+1;i++){
+        
+        if(b[i] == '.' || i == b.size()){
+          vb.push_back(stoi(temp));
+          temp = "";
+          continue;
+        }
+        else
+          temp += b[i];
+    }
+
+    for(int i=0;i<min(va.size(),vb.size());i++){
+        if(va[i] == vb[i]) continue;
+
+        if(va[i] > vb[i]){
+            cout<<a;
+            return;
+        }
+
+        else{
+            cout<<b;
+            return;
+        }
+    }
+
+    if(va.size() > vb.size()){
+        cout<<a;
+        return;
+    }
+
+    cout<<b;
+}
+
+int main() {
+    
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    solve();
+
+    return 0;
+}
