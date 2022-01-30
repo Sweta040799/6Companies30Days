@@ -1,0 +1,20 @@
+bool stoneGame(vector<int> &piles) {
+        int n = piles.size();
+        vector<vector<pair<int,int>>> dp(n, vector<pair<int,int>>(n));
+        for (int i = n - 1; i >= 0; i--) {
+            for (int j = i; j < n; j++) {
+                if (i == j) {
+                    dp[i][j] = make_pair(piles[i], 0);
+                    continue;
+                }
+                pair<int,int> PL = dp[i + 1][j];
+                pair<int,int> PR = dp[i][j - 1];
+                if (piles[i] + PL.second > piles[j] + PR.second) 
+                    dp[i][j] = make_pair(piles[i] + PL.second, PL.first); 
+                else
+                    dp[i][j] = make_pair(piles[j] + PR.second, PR.first); 
+            }
+        }
+        auto[aliceS, leeS] = dp[0][n - 1];
+        return aliceS > leeS;
+    }
